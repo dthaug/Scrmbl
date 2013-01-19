@@ -8,7 +8,10 @@ FactoryGirl.define do
 		factory :admin do
 			admin true
 		end
-		
+	end
 
+	factory :microlist do
+		content "Lorem homo"
+		user
  end	
 end
