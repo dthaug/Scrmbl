@@ -8,5 +8,13 @@
  </h1>
 </section>
 </aside>
+<div class="span8">
+	<h3>Microlists (<%= @user.microlists.count %>)</h3>
+	<ol class="microlists">
+		<%= render @microlists %>
+	</ol>
+	<%= will_paginate @microlists %>
+	<% end %>
+ </div>
 </div>
  
