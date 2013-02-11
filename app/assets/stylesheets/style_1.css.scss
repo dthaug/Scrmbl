@@ -26,6 +26,7 @@ body {
   color: #333333;
   background-color: #ffffff;
   padding-bottom: 40px;
+  overflow: auto;
 }
 
 section {
@@ -40,7 +41,9 @@ textarea {
 	text-align: center;
 }
 
-
+#forms {
+  padding-top: 80px;
+}
 
 /* typography */
 
