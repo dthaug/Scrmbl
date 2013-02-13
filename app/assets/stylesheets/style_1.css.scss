@@ -47,7 +47,23 @@ textarea {
 
 /* typography */
 
+/* scramblesite */
 
+#scrmblePage {
+  margin-top: 100px;
+  padding-top: 20px;
+   background-image: url(/assets/patterns/cream_dust.png);
+      border: 1px dotted #CCC;
+        -webkit-box-shadow: 0 8px 6px -6px black;
+     -moz-box-shadow: 0 8px 6px -6px black;
+          box-shadow: 0 8px 6px -6px black;
+}
+
+#timerBar {
+  background-image: url(/assets/patterns/low_contrast_linen.png);
+  color: #FFF;
+
+}
 
 /* header */
 
