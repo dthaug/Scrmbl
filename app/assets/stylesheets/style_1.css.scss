@@ -24,7 +24,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  background-color: #ffffff;
+  background-image: url(/assets/patterns/grey.png);
   padding-bottom: 40px;
   overflow: auto;
 }
@@ -260,9 +260,12 @@ input, textarea, select, .uneditable-input {
       margin-right: 10px;
     }
 
-     #topScrmbls {
-      background-image: url(/assets/patterns/straws.png);
-
+    #homePage  {
+      background-image: url(/assets/patterns/satinweave.png);
+      border: 1px dotted #CCC;
+        -webkit-box-shadow: 0 8px 6px -6px black;
+     -moz-box-shadow: 0 8px 6px -6px black;
+          box-shadow: 0 8px 6px -6px black;
     }
 
 
