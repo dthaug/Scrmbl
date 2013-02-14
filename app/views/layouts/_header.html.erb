@@ -14,10 +14,17 @@
                   					<%= link_to "ScrambleBox", root_path,  {:class => "brand"}  %>
                   				</ul>
 
+
 					<ul class="nav pull-right">
 
-						<li><%= link_to "Help", help_path %></li>
+						 <form class="navbar-search">
+                              <input type="text" class="search-query" placeholder="Search">
+                         </form>
+
+
 						 <% if signed_in? %>
+
+                  	    
 						  <li><%= link_to "Users", users_path %></li>
 						  <li id="fat-menu" class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -34,8 +41,10 @@
 				
 				
 						<% else %>
+
 						<li><%= link_to "Sign In", signin_path %></li>
 						<% end %>
+
 					</ul>
 				
 			</div>

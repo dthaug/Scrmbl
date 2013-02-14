@@ -59,9 +59,10 @@ textarea {
           box-shadow: 0 8px 6px -6px black;
 }
 
-#timerBar {
+#scrmbleSideBar {
   background-image: url(/assets/patterns/low_contrast_linen.png);
   color: #FFF;
+  
 
 }
 
@@ -159,15 +160,9 @@ aside {
 
 /* forms */
 
-input, textarea, select, .uneditable-input {
-	border: 1px solid #bbb;
-	width: 100%;
-	padding: 10px;
-	height: auto;
-	margin-bottom: 15px;
-	@include box_sizing;
+.search-query {
+  margin-top: 5px;  
 }
-
 #error_explanation {
 	color: #f00;
 	ul {
@@ -278,6 +273,7 @@ input, textarea, select, .uneditable-input {
 
     #homePage  {
       background-image: url(/assets/patterns/satinweave.png);
+      margin-top: 50px;
       border: 1px dotted #CCC;
         -webkit-box-shadow: 0 8px 6px -6px black;
      -moz-box-shadow: 0 8px 6px -6px black;
