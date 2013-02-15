@@ -6,14 +6,14 @@ def generate_scale(progress, width, total_items)
 	step_value = Float(total_items/5);
 
 	for i in 0..5 do
-		returnhtml += content_tag(:div, "#{step_value.ceil*i}", class: "milestonecaption", style: "left: #{10+((Float(width-40)/5.0)*i)}px")+"\n"
+		returnhtml += content_tag(:div, "#{step_value.ceil*i}", class: "milestonecaption", style: "left: #{10+(((Float(width-40)/5.0))*i)}px")+"\n"
 	end
 	returnhtml += content_tag(:p,"", style: "height: 8px; margin: 0px")+"\n"
 
 	scalemarks = "";
 
 	for i in 0..5 do
-		scalemarks += content_tag(:div, "", class: "scalemark", style: "left: #{20+(((width-40)/5)*i)}px")+"\n"
+		scalemarks += content_tag(:div, "", class: "scalemark", style: "left: #{20+((Float(width-40)/5)*i)}px")+"\n"
 	end
 
 	returnhtml += content_tag(:div, scalemarks.html_safe, class: "scale-tb2")+"\n"
@@ -27,11 +27,11 @@ def generate_milestone_bars(progress, users_required, width, total_items)
 	returnvalue = content_tag(:div, "", class: "box1")
 
 	users_required.each_index { |x| 
-		returnvalue += content_tag(:div, "" , class: "target", id: "milestonemark#{x+1}", style: "left: #{((Float(width-40)/Float(total_items))*Float(users_required[x])).floor}px")+"\n"
+		returnvalue += content_tag(:div, "" , class: "target", id: "milestonemark#{x+1}", style: "left: #{((Float(width-40)/Float(total_items))*Float(users_required[x]))}px")+"\n"
 	}
 
 	progress.each_index { |x| 
-		returnvalue += content_tag(:div, "#{((Float(width-40)/Float(total_items))*Float(progress[x])).ceil}", class: "msbar", id: "milestonebar#{x+1}", style: "width: 0px")+"\n"
+		returnvalue += content_tag(:div, "#{((Float(width-40)/Float(total_items))*Float(progress[x]))}", class: "msbar", id: "milestonebar#{x+1}", style: "width: 0px")+"\n"
 	}
 
 	returnvalue = content_tag(:div, returnvalue.html_safe, class: "box-wrap")+"\n"
