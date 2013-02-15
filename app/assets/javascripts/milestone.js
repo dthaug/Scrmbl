@@ -3,22 +3,11 @@ var values;
 var targetValues;
 
 var animateMilestones = function(steps){
+
+    //var crossBrowser = new CrossBrowser();
     
-    if(document.getElementsByClassName){
-        milestones = document.getElementsByClassName("msbar");
-    }
-    else{
-        //fix for internet explorer
-        milestones = new Array();
-        var i = 0;
-        var a = document.getElementsByTagName("div");
-        
-        while(element = a[i++]){
-            if (element.className == "msbar") {
-                milestones.push(element);
-            }
-        }
-    }
+    milestones = CrossBrowser.getElementsByClassName("msbar");
+
     values = new Array(milestones.length);
     targetValues = new Array(milestones.length);
 
