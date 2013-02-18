@@ -4,9 +4,7 @@ var targetValues;
 
 var animateMilestones = function(steps){
 
-    //var crossBrowser = new CrossBrowser();
-    
-    milestones = CrossBrowser.getElementsByClassName("msbar");
+    milestones = CrossBrowser.getElementsByClassName("msbar", "div");
 
     values = new Array(milestones.length);
     targetValues = new Array(milestones.length);
@@ -21,9 +19,10 @@ var animateMilestones = function(steps){
 
 var updateMilestoneBars = function(){
     var repeat = false;
+
     for(var j=0;j<milestones.length;j++){
         values[j] = values[j] + Math.ceil((targetValues[j]-values[j])/20);
-        milestones[j].style.width = values[j] +"px";
+        milestones[j].style.width = values[j] +"%";
         if(targetValues[j]>values[j]){
             repeat = true;
         }
@@ -35,17 +34,17 @@ var updateMilestoneBars = function(){
 }
 
 if(window.attachEvent) {
-    window.attachEvent('onload', setTimeout("animateMilestones(50)",500));
-} 
+    window.attachEvent('onload', setTimeout("animateMilestones(50)", 500));
+}
 else {
     if(window.onload) {
         var curronload = window.onload;
         var newonload = function() {
             curronload();
-            setTimeout("animateMilestones(50)",500);
+            setTimeout("animateMilestones(50)", 500);
         };
         window.onload = newonload;
-    } else {
-        window.onload = setTimeout("animateMilestones(50)", 500);
+        } else {
+            window.onload = setTimeout("animateMilestones(50)", 500);
     }
 }
