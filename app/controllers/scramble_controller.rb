@@ -1,2 +1,3 @@
 class ScrambleController < ApplicationController
+
 end

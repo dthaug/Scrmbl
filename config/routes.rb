@@ -5,6 +5,7 @@ Scrmbl::Application.routes.draw do
   match '/help',    to: 'static_pages#help'
   match '/scramble', to: 'scramble#show'
   match '/newscramble', to: 'scramble#new'
+  match '/allscrambles', to: 'scramble#index'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
   match '/signup', to: 'users#new'
