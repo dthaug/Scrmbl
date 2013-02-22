@@ -45,3 +45,71 @@
   border: 1px solid #CCC;
   padding: 0px 5px 5px 5px;
 }
+
+/* ScrambleBox */
+
+.scramblebox
+  {
+ float: left;
+position: relative;
+width: 300px;
+border: 1px solid #ccc;
+margin-right: 20px;
+margin-bottom: 20px;
+overflow: hidden;
+  }
+
+  .scramblebox:hover
+  {
+ color: rgba(54, 25, 25, .5);
+  }
+
+.scramblebox img {
+  width: 300px;
+  height: 225px;
+}
+
+
+.scrambletitlediv {
+position: absolute;
+top: 0px;
+left: 0px;
+background: rgba(54, 25, 25, .5);
+float: left;
+width: 100%;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+}
+
+.scrambletitle {
+  padding: 7px 10px !important;
+      color: #FFF;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.scramblebuy {
+float: left;
+width: 100%;
+height: 50px;
+background: #27AAE2;
+position: relative;
+}
+
+.scramblebuybtn {
+  background-color:#FFF;
+  font-size:15px;
+  font-weight:bold;
+  padding:7px 23px;
+  margin: 7px 0px 0px 10px;
+  text-decoration:none;
+}
+.scramblebuybtn:hover {
+  text-decoration: none;
+  background-color:#dfdfdf;
+}
+
+.scramblebuybtn:active {
+  position:relative;
+  top:1px;
+}
