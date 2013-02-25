@@ -34,9 +34,9 @@
   margin-top: 100px;
   background-image: url(/assets/patterns/cream_dust.png);
   border: 1px dotted #CCC;
-        -webkit-box-shadow: 0 8px 6px -6px black;
-     -moz-box-shadow: 0 8px 6px -6px black;
-          box-shadow: 0 8px 6px -6px black;
+        -moz-box-shadow: 0px 7px 17px #000000;
+-webkit-box-shadow: 0px 7px 17px #000000;
+box-shadow: 0px 7px 17px #CCC;
 }
 
 #scrmbleSideBar {
@@ -66,7 +66,7 @@ overflow: hidden;
 
 .scramblebox img {
   width: 300px;
-  height: 225px;
+  height: 250px;
 }
 
 
@@ -77,8 +77,8 @@ left: 0px;
 background: rgba(54, 25, 25, .5);
 float: left;
 width: 100%;
-border-bottom-right-radius: 5px;
-border-bottom-left-radius: 5px;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
 }
 
 .scrambletitle {
@@ -89,16 +89,22 @@ border-bottom-left-radius: 5px;
 }
 
 .scramblebuy {
+position: absolute;
+bottom: 0px;
+left: 0px;
+background: rgba(54, 25, 25, .5);
 float: left;
 width: 100%;
-height: 50px;
-background: #FFF;
-position: relative;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+h4 {
+  color: #FFF;
+}
 }
 
 #scramblebtn {
   float: left;
-  margin: 9px 0px 0px 5px;
+  margin: 9px 0px 5px 5px;
 }
 
 .scramblebuybtn:active {
