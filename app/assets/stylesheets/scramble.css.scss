@@ -50,6 +50,7 @@ box-shadow: 0px 7px 17px #CCC;
 
 .scramblebox
   {
+    margin-top: 20px;
  float: left;
 position: relative;
 width: 300px;
@@ -77,34 +78,44 @@ left: 0px;
 background: rgba(54, 25, 25, .5);
 float: left;
 width: 100%;
-border-top-right-radius: 5px;
-border-top-left-radius: 5px;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
 }
 
 .scrambletitle {
-  padding: 7px 10px !important;
-      color: #FFF;
-    font-size: 14px;
-    line-height: 18px;
+  padding: 6px 2px !important;
+    color: #FFF;
+    font-size: 16px;
+    line-height: 14px;
 }
 
 .scramblebuy {
 position: absolute;
 bottom: 0px;
 left: 0px;
-background: rgba(54, 25, 25, .5);
+background: rgba(25, 25, 25, .5);
 float: left;
 width: 100%;
-border-bottom-right-radius: 5px;
-border-bottom-left-radius: 5px;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
 h4 {
   color: #FFF;
 }
 }
 
 #scramblebtn {
-  float: left;
-  margin: 9px 0px 5px 5px;
+  margin: 9px 0px 10px 0px;
+   padding: 7px 15px 7px 15px;
+}
+
+#milestoneShow {
+  margin-top: 9px;
+  padding: 10px 15px 10px 15px;
+}
+
+#timerShow {
+  margin-top: 9px;
+  padding: 10px 10px 10px 10px;
 }
 
 .scramblebuybtn:active {

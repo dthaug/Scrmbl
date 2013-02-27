@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130119004514) do
+ActiveRecord::Schema.define(:version => 20130220231532) do
 
   create_table "listings", :force => true do |t|
     t.string   "content"
@@ -28,6 +28,11 @@ ActiveRecord::Schema.define(:version => 20130119004514) do
   end
 
   add_index "microlists", ["user_id", "created_at"], :name => "index_microlists_on_user_id_and_created_at"
+
+  create_table "scrambles", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

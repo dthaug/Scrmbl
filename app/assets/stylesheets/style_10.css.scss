@@ -52,7 +52,31 @@ textarea {
 #businessSignup {
    margin:0 auto;
    float:none;
+   position: relative;
+   background: rgba(54,25,25,.75);
+   padding: 10px 10px 10px 10px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   h2 {
+    color: #FFF;
+   }
+   p {
+    color: #F4F4F4;
+   }
 }
+
+#featuredScramble {
+  margin:0 auto;
+   float:none;
+}
+
+#businessSignupIMG {
+  position: absolute;
+  width: 940px;
+  height: 310px;
+  border: 0;
+}
+
 
 /* header */
 
@@ -206,9 +230,9 @@ aside {
       background: #fff;
       margin-top: 50px;
       border: 1px dotted #CCC;
-        -moz-box-shadow: 0px 7px 17px #000000;
--webkit-box-shadow: 0px 7px 17px #000000;
-box-shadow: 0px 7px 17px #CCC;
+      -moz-box-shadow: 0px 7px 17px #000000;
+      -webkit-box-shadow: 0px 7px 17px #000000;
+      box-shadow: 0px 7px 17px #CCC;
       padding: 10px 10px 10px 10px;
     }
 
@@ -250,49 +274,4 @@ box-shadow: 0px 7px 17px #CCC;
     }
 
 
-    @media (max-width: 767px) {
-
-      .navbar-inner {
-        margin: -20px;
-      }
-
-      .carousel {
-        margin-left: -20px;
-        margin-right: -20px;
-      }
-      .carousel .container {
-
-      }
-      .carousel .item {
-        height: 300px;
-      }
-      .carousel img {
-        height: 300px;
-      }
-      .carousel-caption {
-        width: 65%;
-        padding: 0 70px;
-        margin-top: 100px;
-      }
-      .carousel-caption h1 {
-        font-size: 30px;
-      }
-      .carousel-caption .lead,
-      .carousel-caption .btn {
-        font-size: 18px;
-      }
-
-      .marketing .span4 + .span4 {
-        margin-top: 40px;
-      }
-
-      .featurette-heading {
-        font-size: 30px;
-      }
-      .featurette .lead {
-        font-size: 18px;
-        line-height: 1.5;
-      }
-
-    }
 

@@ -5,7 +5,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>The best deals from the best suppliers</h1>
-              <p class="lead">Here at ScrambleBox you will get the best price, because you are the one deciding the price! Get your friends to join you to get even lower prices on your next shopping spree!</p>
+              <p class="lead">Here at ScrambleBox you will get the best price, because you are the one deciding the price! Get your friends to join you to get even lower prices on your next shopping spree! It's ofcourse free!</p>
              <%= link_to "Sign up today", signup_path, class: "btn btn-success btn-large" %>
             </div>
           </div>
@@ -16,7 +16,7 @@
             <div class="carousel-caption">
               <h1>Explore new scrambles each day!</h1>
               <p class="lead">Every day there is new scrambles posted on the site and it's for you to see! Find some new deals and help everyone decide your price.</p>
-              <a class="btn btn-large btn-primary" href="#">Browse scrambles</a>
+              <a class="btn btn-large btn-primary" href="/allscrambles.html">Browse scrambles</a>
             </div>
           </div>
         </div>
@@ -26,7 +26,7 @@
             <div class="carousel-caption">
               <h1>What is ScrambleBox?</h1>
               <p class="lead">ScrambleBox is a complex and fine tuned machinery and it's made for you only. If you want to learn more about ScrambleBox, you can read more about it here.</p>
-              <a class="btn btn-large btn-primary" href="#">Learn more</a>
+              <a class="btn btn-large btn-primary" href="/about.html">Learn more</a>
             </div>
           </div>
         </div>
@@ -40,22 +40,13 @@
       <div class="row" id="topScrmbls">
         <center> <h1> Best selling scrambles </h1> </center>
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+            <%= render 'shared/scramblebox' %>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+            <%= render 'shared/scramblebox' %>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+            <%= render 'shared/scramblebox' %>
         </div><!-- /.span4 -->
       </div><!-- /.row -->
 
@@ -65,35 +56,26 @@
       <div class="row" id="endingScrmbls">
         <center> <h1> Scrambles ending soon </h1> </center>
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+            <%= render 'shared/scramblebox' %>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <%= render 'shared/scramblebox' %>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <%= render 'shared/scramblebox' %>
         </div><!-- /.span4 -->
       </div><!-- /.row -->
 
       <hr class="featurette-divider">
 
       <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <center> <h1> Featured Scramble </h1> </center>
-        <div class="span12 pagination-centered" id="featuredScrmbl">
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="span8"  id="featuredScramble">
           <h2>Heading</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
+        </div><!-- /.span4 -->
       </div><!-- /.row -->
 
       <hr class="featurette-divider">
@@ -122,12 +104,14 @@
 
       <!-- Three columns of text below the carousel -->
       <div class="row-fluid">
+                  <img src="/assets/background_wood.gif" id="businessSignupIMG">
         <div class="span12">
-          <div class="span8"  id="businessSignup">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <div class="span6"  id="businessSignup">
+          <center><h2>Get your business on ScrambleBox today!</h2></center>
+          <p>Here on ScrambleBox we give the tools for you to sell your products in large numbers at the time for what we call a progressive price, where the customer is in charge of the discount and extra items. Sign up to learn more about how to get started. It's free!</p>
+          <p><a class="btn btn-primary" href="#">Sign up for a business account</a></p>
         </div><!-- /.span4 -->
       </div><!-- /.row -->
-    </div>
   </div>
+ </div>
+</div>
