@@ -10,8 +10,11 @@ FactoryGirl.define do
 		end
 	end
 
-	factory :microlist do
-		content "Lorem homo"
-		user
+	factory :business do
+		sequence(:name)   {  |n| "Person #{n}" }
+		sequence(:orgnr)  {  |n| " #{n}"}
+		sequence(:email)  {  |n| "person_#{n}@example.com" }
+		password  "negroface"
+		password_confirmation "negroface"
  end	
 end

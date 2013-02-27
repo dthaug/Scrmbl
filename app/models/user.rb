@@ -14,6 +14,9 @@ class User < ActiveRecord::Base
   attr_accessible :email, :name, :password, :password_confirmation
   has_secure_password
 
+  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  has_many :followed_users, through: :relationships, source: :followed
+
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
 
@@ -26,6 +29,22 @@ class User < ActiveRecord::Base
 
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
+
+  def feed
+    Scrambles.from_businesses_followed_by(self)
+  end
+
+   def following?(business)
+    relationships.find_by_followed_id(business.id)
+  end
+
+  def follow!(business)
+    relationships.create!(followed_id: business.id)
+  end
+
+  def unfollow!(business)
+    relationships.find_by_followed_id(business.id).destroy
+  end
 
 private
   def create_remember_token
