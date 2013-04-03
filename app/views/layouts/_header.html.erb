@@ -39,14 +39,22 @@
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
 						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
 							<form method="post" action="login" accept-charset="UTF-8">
-								<input style="margin-bottom: 15px;" type="text" placeholder="E-mail" id="email" name="email">
-								<input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password">
+								<%= form_for(:session, url: sessions_path) do |f| %>
+								<%= f.label :email %>
+                                <%= f.text_field :email, :style=>"margin-bottom: 15px;" %>
+								
+                                <%= f.label :password %>
+                                <%= f.password_field :password, :style=>"margin-bottom: 15px;" %>
+
 								<input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
 								<label class="string optional" for="user_remember_me"> Remember me</label>
-								<input class="btn btn-primary btn-block" type="button" id="sign-in" value="Sign In">
+								<%= f.submit "Sign in", class: "btn btn-primary btn-block" %>
 								<label style="text-align:center;margin-top:5px">or</label>
                                 <input class="btn btn-primary btn-block" type="button" id="sign-in-facebook" value="Sign In with Facebook">
 								<input class="btn btn-primary btn-block" type="button" id="sign-in-twitter" value="Sign In with Twitter">
+								<hr>
+								<center><p>New user? <%= link_to "Sign up now!", signup_path %></p></center>
+								<% end %>
 							</form>
 						</div>
 					</li>

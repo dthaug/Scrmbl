@@ -1,10 +1,10 @@
 class Scramble < ActiveRecord::Base
 
-  attr_accessible :content
+  attr_accessible :content, :title
   belongs_to :business
 
   validates :business_id, presence: true
-  validates :content, presence: true, length: { maximum: 140 }
+  validates :content, presence: true, length: { minimum: 140 }
 
   default_scope order: 'scramble.created_at DESC'
 

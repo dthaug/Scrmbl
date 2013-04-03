@@ -17,7 +17,6 @@ describe User do
   it { should respond_to(:remember_token) }
   it { should respond_to(:admin) }
   it { should respond_to(:authenticate) }
-  it { should respond_to(:microlists) }
 
   it { should be_valid }
   it { should_not be_admin }
@@ -123,27 +122,6 @@ describe User do
     before { @user.save }
     its(:remember_token) { should_not be_blank }
   end
-
-  describe "microlist associations" do
-    
-    before { @user.save }
-    let!(:older_microlist) do
-      FactoryGirl.create(:microlist, user: @user, created_at: 1.day.ago)
-    end
-    let!(:newer_microlist) do
-      FactoryGirl.create(:microlist, user: @user, created_at: 1.hour.ago)
-    end
-
-    it "should have the right microposts in the right order" do
-      @user.microlists.should == [newer_microlist, older_microlist]
-    end
-
-    it "should destroy associated microposts" do
-      microlists = @user.microlists
-      @user.destroy
-      microlists.each do |microlist|
-        Microlist.find_by_id(microlist.id).should be_nil
-      end
-    end
-  end
+ end
+end
 end

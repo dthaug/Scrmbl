@@ -1,19 +1,26 @@
 Scrmbl::Application.routes.draw do
   
+  resources :businesses 
+  resources :users 
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :scrambles, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
+
   root to: 'static_pages#home'
 
   match '/help',    to: 'static_pages#help'
-  match '/scramble', to: 'scramble#show'
-  match '/newscramble', to: 'scramble#new'
-  match '/allscrambles', to: 'scramble#index'
+  match '/scramble', to: 'scrambles#show'
+  match '/business/dashboard', to: 'businesses#index'
+  match '/newscramble', to: 'scrambles#new'
+  match '/allscrambles', to: 'scrambles#index'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
   match '/signup', to: 'users#new'
-  match '/business/signup', to: 'business#new'
+  match '/signup-business', to: 'businesses#new'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
-  resources :users
-  resources :sessions, only: [:new, :create, :destroy]
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

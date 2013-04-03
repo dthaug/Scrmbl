@@ -1,0 +1,57 @@
+<% provide(:title, "Scramble") %>
+
+<div class="container marketing" id="scrmblePage">
+      <!-- Three columns of text below the carousel -->
+      <div class="row" id="topScrmbls">
+        <div class="span11">
+        	        <center> <h1> <%= @scramble.title %> </h1> </center>
+                  <hr>
+            <img src="/assets/home-interior-design.jpg">
+            <p>
+
+            <%= milestone_bar([5,17], [15,20], 25, ["10%", "20%"]) %>
+
+
+        <center>   <h2>Heading</h2>     </center>
+          <p> <%= @scramble.content %> </p>
+
+        </div><!-- /.span4 -->
+        <div class="span4" id="scrmbleSideBar">
+          <h2><%= @business.name %></h2>
+          <p><a class="btn btn-warning btn-large" href="#">Follow</a></p>
+          <p> <%= @business.contactinfo %> </p>
+          <p><b><%= @business.slogan %></b></p>
+          <p> www.plektersalg.no </p>
+          <hr>
+          <h4>Friends who bought this scramble</h4>
+          <p> -------------------------
+            --------------------------
+            --------------------------
+            ---------------------------
+            ---------------------------
+          </p>
+          <hr>
+          <h4>Scrambles from {retailername}</h4>
+          <p> --------------------------------
+            -----------------------------------
+            -----------------------------------
+            ----------------------------------
+            -----------------------------------
+            </p>
+            <a class="btn btn-primary" href="#">More from {retailername}&raquo;</a>
+            <hr>
+             <h4>Related scrambles</h4>
+          <p> --------------------------------
+            -----------------------------------
+            -----------------------------------
+            ----------------------------------
+            -----------------------------------
+            </p>
+            <a class="btn btn-primary" href="#">More &raquo;</a>
+
+
+
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->                
+    </div><!-- container -->
+      </div><!-- /.row -->

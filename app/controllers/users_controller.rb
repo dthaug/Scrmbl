@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 def destroy
   User.find(params[:id]).destroy
   flash[:success] = "User Destroyed!"
-  redirect_to users_path
+  redirect_to(root_path)
 end
 
 def edit

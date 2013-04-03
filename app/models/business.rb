@@ -3,7 +3,10 @@ class Business < ActiveRecord::Base
   attr_accessible :email, :orgnr, :name, :password, :password_confirmation
   has_secure_password
 
-  before_save { |user| user.email = email.downcase }
+  has_many :scrambles
+  has_many :followers
+
+  before_save { |business| business.email = email.downcase }
   before_save :create_remember_token
 
   validates :name, presence: true, length: { maximum: 50 }

@@ -10,6 +10,7 @@ gem "launchy"
 gem 'paperclip', "~> 3.0"
 gem "jquery-fileupload-rails"
 gem 'thin'
+gem 'formtastic'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
