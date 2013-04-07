@@ -25,6 +25,22 @@ ActiveRecord::Schema.define(:version => 20130403193052) do
 
   add_index "businesses", ["remember_token"], :name => "index_businesses_on_remember_token"
 
+  create_table "listings", :force => true do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "microlists", :force => true do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "microlists", ["user_id", "created_at"], :name => "index_microlists_on_user_id_and_created_at"
+
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
