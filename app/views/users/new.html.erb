@@ -1,0 +1,22 @@
+<% provide(:title, 'Sign up') %>
+
+<div class="container" id="forms">
+
+<div class="row">
+  <div class="span6">
+  	<div class="well">
+  	<h1>Sign up</h1>
+    <%= form_for(@user) do |f| %>
+     <%= render 'shared/error_messages_users', object: f.object %>
+      <%= render 'fields', f: f %> 
+      <hr>
+      <%= f.submit "Create my account", :class => "btn btn-large btn-primary" %>
+    <% end %>
+   </div>
+  </div>
+  <div class="span6">
+  	<h3> Get your discounts now and help your friends get theirs today! See how to get started scrambling today in this video! </h3>
+    <h1> PLACEHOLDER FOR VIDEO </h1>
+    <p>Want more info about ScrambleBox? Read more here </p>
+  </div>
+</div>

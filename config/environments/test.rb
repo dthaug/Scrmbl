@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ScBox::Application.configure do
+=======
+Scrmbl::Application.configure do
+>>>>>>> 5cd8ed10911b1e37a98f0635ad6202893d2ab629
   # Settings specified here will take precedence over those in config/application.rb
 
   # The test environment is used exclusively to run your application's
@@ -34,4 +38,14 @@ ScBox::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+<<<<<<< HEAD
+=======
+
+  # Speed up tests by lowering BCrypt's cost function.
+require 'bcrypt'
+silence_warnings do
+BCrypt::Engine::DEFAULT_COST = BCrypt::Engine::MIN_COST
+end
+
+>>>>>>> 5cd8ed10911b1e37a98f0635ad6202893d2ab629
 end

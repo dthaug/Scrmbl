@@ -1,5 +1,6 @@
 class ScramblesController < ApplicationController
 
+<<<<<<< HEAD
   skip_before_filter :verify_authenticity_token
   #before_filter      :authenticate_user!, :only => :show, :unless => :in_production
   before_filter :authenticate_user!, except: [:show]
@@ -63,10 +64,26 @@ class ScramblesController < ApplicationController
         format.html { render action: "edit" }
         format.json { render json: @scramble.errors, status: :unprocessable_entity }
       end
+=======
+  before_filter :signed_in_business, only: [:create, :destroy]
+  before_filter :correct_business,   only: :destroy
+
+  
+
+  def create
+    @scramble = current_business.scramble.create(params[:scramble])
+    if @scramble.save
+      flash[:success] = "ScrambleBox created!"
+      redirect_to scramble_path(@scramble)
+    else
+      @feed_items = []
+      render 'static_pages/home'
+>>>>>>> 5cd8ed10911b1e37a98f0635ad6202893d2ab629
     end
   end
 
   def destroy
+<<<<<<< HEAD
     @scramble = current_user.scrambles.find(params[:id])
     @scramble.destroy
 
@@ -77,3 +94,17 @@ class ScramblesController < ApplicationController
   end
 
 end
+=======
+    @scramble.destroy
+    redirect_to root_url
+  end
+
+  private
+
+    def correct_business
+      @scramble = current_business.scramble.find_by_id(params[:id])
+      redirect_to root_url if @scramble.nil?
+    end
+end
+
+>>>>>>> 5cd8ed10911b1e37a98f0635ad6202893d2ab629

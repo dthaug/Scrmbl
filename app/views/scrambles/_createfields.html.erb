@@ -1,0 +1,26 @@
+<div class="row">
+ <div class="span8">
+ 	<%= form_for(:scrambles) do |f| %>
+ 	 <h3> Title of your ScrambleBox </h3>
+
+ 	<%= f.text_field :title %>
+ 	<hr>
+
+  <h3>Add photos</h3>
+ <hr>
+  <h3> Milestones and timer </h3>
+ <hr>
+  <h3> Description </h3>
+
+    <%= f.text_area :content, placeholder: "Write a good description for your scramble." , :rows => 10 %>
+
+   <input type="text" autocomplete="off" data-items="6" data-provide="typeahead" name="tags" placeholder="Tags" style="width:9em;" class="input-medium tagManager" data-original-title="">
+  <script> jQuery(".tagManager").tagsManager(); </script>
+ <hr>
+  <h3> Categories </h3>
+ <hr>
+
+    <%= f.submit "Post Scramble", class: "btn btn-large btn-primary" %>
+   <% end %>
+
+</div> <!-- span12 -->

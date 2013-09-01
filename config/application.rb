@@ -9,7 +9,11 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+<<<<<<< HEAD
 module ScBox
+=======
+module Scrmbl
+>>>>>>> 5cd8ed10911b1e37a98f0635ad6202893d2ab629
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -58,7 +62,10 @@ module ScBox
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+<<<<<<< HEAD
 
     config.assets.initialize_on_precompile = false
+=======
+>>>>>>> 5cd8ed10911b1e37a98f0635ad6202893d2ab629
   end
 end

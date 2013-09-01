@@ -13,4 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+<<<<<<< HEAD
 //= require_tree .
+=======
+//= require jquery-fileupload/basic
+//= require jquery-fileupload/vendor/tmpl
+//= require_tree .
+>>>>>>> 5cd8ed10911b1e37a98f0635ad6202893d2ab629

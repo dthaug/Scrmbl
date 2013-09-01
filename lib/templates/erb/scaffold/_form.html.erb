@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%%= simple_form_for(@<%= singular_table_name %>) do |f| %>
   <%%= f.error_notification %>
 
@@ -10,4 +11,16 @@
   <div class="form-actions">
     <%%= f.button :submit %>
   </div>
+=======
+<%%= semantic_form_for @<%= singular_name %> do |f| %>
+  <%%= f.inputs do %>
+  <%- attributes.each do |attribute| -%>
+    <%%= f.input :<%= attribute.name %> %>
+  <%- end -%>
+  <%% end %>
+
+  <%%= f.actions do %>
+    <%%= f.action :submit, :as => :input %>
+  <%% end %>
+>>>>>>> 5cd8ed10911b1e37a98f0635ad6202893d2ab629
 <%% end %>

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ScBox::Application.configure do
+=======
+Scrmbl::Application.configure do
+>>>>>>> 5cd8ed10911b1e37a98f0635ad6202893d2ab629
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -34,8 +38,11 @@ ScBox::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+<<<<<<< HEAD
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   Paperclip.options[:command_path] = "/usr/local/bin/"
+=======
+>>>>>>> 5cd8ed10911b1e37a98f0635ad6202893d2ab629
 end

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
@@ -33,3 +34,75 @@
   </div>
 </div>
 
+=======
+	<div class="navbar-wrapper">
+			<div class="container">
+				<div class="navbar navbar-inverse">
+					<div class="navbar-inner">
+						<!-- Responsive navbar -->
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                  </a>
+				<div class="nav-collapse collapse">
+					<ul class="nav pull-left">
+                  					<%= link_to "ScrambleBox", root_path,  {:class => "brand"}  %>
+                  				</ul>
+					<ul class="nav pull-right">
+						 <form class="navbar-search">
+                              <input type="text" class="search-query" placeholder="Search">
+                         </form>
+						 <% if signed_in? %>
+						  <li><%= link_to "Home", root_path %></li>
+						  <li><%= link_to "Activity", users_path %></li>
+						   <li id="fat-menu" class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b>
+							</a>
+							  <ul class="dropdown-menu">
+								 <li><%= link_to "Profile", current_user %></li>
+								 <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+								 	</ul>
+								<li class="divider"></li>
+								 <li>
+									<%= link_to "Sign out", signout_path, method: "delete" %>
+								 </li>
+				
+				
+						<% else %>
+
+						<li class="divider-vertical"></li>
+					    <li class="dropdown">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+							<form method="post" action="login" accept-charset="UTF-8">
+								<%= form_for(:session, url: sessions_path) do |f| %>
+								<%= f.label :email %>
+                                <%= f.text_field :email, :style=>"margin-bottom: 15px;" %>
+								
+                                <%= f.label :password %>
+                                <%= f.password_field :password, :style=>"margin-bottom: 15px;" %>
+
+								<input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
+								<label class="string optional" for="user_remember_me"> Remember me</label>
+								<%= f.submit "Sign in", class: "btn btn-primary btn-block" %>
+								<label style="text-align:center;margin-top:5px">or</label>
+                                <input class="btn btn-primary btn-block" type="button" id="sign-in-facebook" value="Sign In with Facebook">
+								<input class="btn btn-primary btn-block" type="button" id="sign-in-twitter" value="Sign In with Twitter">
+								<hr>
+								<center><p>New user? <%= link_to "Sign up now!", signup_path %></p></center>
+								<% end %>
+							</form>
+						</div>
+					</li>
+
+						<% end %>
+
+					</ul>
+				
+			</div>
+		</div>
+	</div>
+ </div>
+</div>
+>>>>>>> 5cd8ed10911b1e37a98f0635ad6202893d2ab629

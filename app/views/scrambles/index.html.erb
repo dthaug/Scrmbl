@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  <h1>Listing your scrambles</h1>
 
     <table class="table table-striped">
@@ -9,3 +10,30 @@
     <br />
 
     <%= link_to 'New Scramble', new_scramble_path %>
+=======
+<% provide(:title, "Browse Scrambles") %>
+
+<div class="container marketing" id="indexScramble">
+ <div class="row">
+  <div class="span12">
+ 	<center> <h1> Browse all Scrambles </h1> </center>
+ 	<hr>
+<div class="row" id="topScrmbls">
+      <center> <h2> Best selling scrambles </h2> </center>
+        <div class="span4">
+          <%= render 'scramblebox' %>
+        </div><!-- /.span4 -->
+        <div class="span4">
+            <%= render 'scramblebox' %>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <%= render 'scramblebox' %>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
+  </div>
+  <!-- Navigation bar -->
+  <%= render 'sidebar' %> 
+  <!-- end -->
+ </div>
+</div>
+>>>>>>> 5cd8ed10911b1e37a98f0635ad6202893d2ab629

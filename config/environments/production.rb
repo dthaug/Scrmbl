@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ScBox::Application.configure do
+=======
+Scrmbl::Application.configure do
+>>>>>>> 5cd8ed10911b1e37a98f0635ad6202893d2ab629
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -54,6 +58,13 @@ ScBox::Application.configure do
   # Enable threaded mode
   # config.threadsafe!
 
+<<<<<<< HEAD
+=======
+# Force all access to the app over SSL, use Strict-Transport-Security,
+# and use secure cookies.
+config.force_ssl = true
+
+>>>>>>> 5cd8ed10911b1e37a98f0635ad6202893d2ab629
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found)
   config.i18n.fallbacks = true
